@@ -16,7 +16,8 @@ ui = fluidPage(
    numericInput("lng", "longitude", min=-360, max=360, value=-71.0589),
    numericInput("lat", "latitude", min=-360, max=360, value=42.3601),
    numericInput("zoom", "zoom", min=1, max=18, value=12),
-   radioButtons("labs", "labels", choices=c("on", "off"))
+   radioButtons("labs", "labels", choices=c("on", "off")),
+   actionButton("stopBtn", "stop app")
   ),
   mainPanel(
    tabsetPanel(

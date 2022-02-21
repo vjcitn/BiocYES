@@ -1,6 +1,6 @@
 Package: BiocYES
 Title: Cancer data science activities for CZI YES for CURE collaboration
-Version: 0.0.1
+Version: 0.0.2
 Authors@R:
     person(given = "Vince",
            family = "Carey",
@@ -14,3 +14,4 @@ License: Artistic-2.0
 VignetteBuilder: knitr
 biocViews: Cancer
 RoxygenNote: 7.1.2
+Encoding: UTF-8

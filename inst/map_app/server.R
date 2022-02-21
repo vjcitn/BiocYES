@@ -21,5 +21,8 @@ server = function(input, output, session) {
     setup_display( m, input$provider, input$labs == "on" )
     })
    output$desc = renderPrint( packageDescription("BiocYES") )
+   observeEvent(input$stopBtn, {
+       stopApp(returnValue=NULL)   # could return information here
+      })
 }
 
