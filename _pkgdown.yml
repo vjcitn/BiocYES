@@ -1,4 +1,5 @@
-url: https://github.com/vjcitn/BiocYES
-template:
-  bootstrap: 5
 
+url: http://vjcitn.github.io/BiocYES
+template:
+  params:
+    bootswatch: flatly

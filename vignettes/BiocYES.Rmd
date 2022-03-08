@@ -107,12 +107,30 @@ from `http://oncotree.mskcc.org/api/tumorTypes/tree` to produce
 a searchable table with columns indicating tissue, parent, UMLS tag,
 and NCI code for all tumor types.
 
+## Tumor anatomy: imaging of glioblastoma
+
 # Cancer clinical trials
 
 ## Concepts of equipoise, randomization, and simulation
 
+For an overview of very basic considerations of
+probability and bias in the context of shuffling
+cards, see `vignette("play4YES")`.
+
 ## Finding clinical trials: clinicaltrials.gov
+
+Here is a snapshot from a page at the NIH reference for
+clinical trials (worldwide):
 
 <img src="ct_gov_disclaim.jpg"/>
 
+It is necessary to know what "CTCs" means (circulating tumor cells)
+to make sense of this.
 
+## Survival curves for the comparison of treatments
+
+## Quality-adjusted survival time concepts
+
+# Molecular biology of cancer: data science perspectives
+
+# Patient-initiated research
