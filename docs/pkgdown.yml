@@ -1,0 +1,10 @@
+pandoc: '2.13'
+pkgdown: 2.0.2
+pkgdown_sha: ~
+articles:
+  BiocYES: BiocYES.html
+last_built: 2022-03-08T19:13Z
+urls:
+  reference: https://github.com/vjcitn/BiocYES/reference
+  article: https://github.com/vjcitn/BiocYES/articles
+
