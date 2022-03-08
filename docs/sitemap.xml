@@ -1,45 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/404.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/404.html</loc>
   </url>
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/articles/BiocYES.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/articles/BiocYES.html</loc>
   </url>
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/articles/index.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/authors.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/articles/play4YES.html</loc>
   </url>
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/index.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/authors.html</loc>
   </url>
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/reference/MA_cancer_rate_table.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/index.html</loc>
   </url>
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/reference/index.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/reference/MA_cancer_rate_table.html</loc>
   </url>
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/reference/map_app.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/reference/build_deck.html</loc>
   </url>
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/reference/mass_map.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/reference/faces.html</loc>
   </url>
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/reference/plotwci.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/reference/full_house.html</loc>
   </url>
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/reference/statcrunch_msa.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/reference/us_county_geo.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/reference/is_flush.html</loc>
   </url>
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/reference/woncan.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/reference/map_app.html</loc>
   </url>
   <url>
-    <loc>https://github.com/vjcitn/BiocYES/reference/woncan_meta.html</loc>
+    <loc>http://vjcitn.github.io/BiocYES/reference/mass_map.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/one_pair.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/plotwci.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/statcrunch_msa.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/suits.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/two_pairs.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/us_county_geo.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/woncan.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/woncan_meta.html</loc>
   </url>
 </urlset>

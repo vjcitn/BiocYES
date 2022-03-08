@@ -62,7 +62,7 @@ data(woncan_meta)
 cat(woncan_meta, sep="\n")
 data(woncan)
 littab = woncan |> select(MSA, `Cancer Sites`, Age.Adjusted.Rate) |> as.data.frame()
-datatable(littab)
+datatable(littab, options=list(lengthMenu=c(5,10,15,20)))
 ```
 
 ### Representing locations
@@ -82,11 +82,37 @@ they were recorded.
 
 # Cancer anatomy 
 
+## TCGA sites
+
 The Cancer Genome Atlas (TCGA) collects data on a number
-of cancers defined by anatomic site.  The sites are:
+of cancers defined by anatomic site.  The 37 sites available are:
 
 ```{r lktcga}
 library(TCGAutils)
 data(diseaseCodes)
-datatable(diseaseCodes)
+datatable(diseaseCodes, options=list(lengthMenu=c(5,10,15,20)))
 ```
+
+## Oncotree hierarchy
+
+The Memorial Sloan-Kettering Cancer Center manages an
+interactive tumor-type navigation system called oncotree.
+
+A snapshot is:
+
+<img src="oncotreeDemo.png"/>
+
+Exercise: Use the oncotree API and operations on the JSON returned
+from `http://oncotree.mskcc.org/api/tumorTypes/tree` to produce
+a searchable table with columns indicating tissue, parent, UMLS tag,
+and NCI code for all tumor types.
+
+# Cancer clinical trials
+
+## Concepts of equipoise, randomization, and simulation
+
+## Finding clinical trials: clinicaltrials.gov
+
+<img src="ct_gov_disclaim.jpg"/>
+
+
