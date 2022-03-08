@@ -17,3 +17,5 @@ Topics to be addressed
 These topics will be addressed in Jupyter notebooks, R markdown documents, and "shiny apps", to instruct in
 both the subject matter of cancer data science, and the operation
 of computational tools to solve problems in these areas.
+
+To begin, please use the "Get started" link above.

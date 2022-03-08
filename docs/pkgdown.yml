@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   BiocYES: BiocYES.html
   play4YES: play4YES.html
-last_built: 2022-03-08T20:58Z
+last_built: 2022-03-08T21:09Z
 urls:
   reference: http://vjcitn.github.io/BiocYES/reference
   article: http://vjcitn.github.io/BiocYES/articles
