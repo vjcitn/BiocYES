@@ -1,0 +1,92 @@
+---
+title: "BiocYES: Cancer data science for DFCI YES for CURE"
+shorttitle: "outlier dytection methods"
+author: "Vincent J. Carey, stvjc at channing.harvard.edu"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{BiocYES: Cancer data science for DFCI YES for CURE}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+```{r setup, results="hide", echo=FALSE}
+suppressPackageStartupMessages({
+library(BiocYES)
+library(sf)
+library(tibble)
+library(DT)
+library(dplyr)
+library(curatedTCGAData)
+library(TCGAutils)
+library(ontoProc)
+})
+```
+
+# Overview
+
+The BiocYES package collects software and documentation for an introduction
+to data science in the domain of cancer biology, epidemiology, and treatment.
+In 2022 there are five main modules covered:
+
+- Cancer maps
+- Cancer anatomy
+- Cancer clinical trials
+- Molecular biology of cancer: data science considerations
+- Patient-initiated research
+
+# Cancer map concepts
+
+## Drawing maps with R
+
+```{r lkd1}
+library(BiocYES)
+mass_map()
+```
+
+Exercise:  Look at the code for `mass_map` and change it to 
+produce a map of Rhode Island.
+
+## Tabulating cancer statistics with geographic metadata
+
+### Some basic statistics by "metropolitan statistical area"
+
+```{r lkd2}
+library(tibble)
+library(dplyr)
+data(woncan_meta)
+cat(woncan_meta, sep="\n")
+data(woncan)
+littab = woncan |> select(MSA, `Cancer Sites`, Age.Adjusted.Rate) |> as.data.frame()
+datatable(littab)
+```
+
+### Representing locations
+
+```{r lkd3}
+library(sf)
+data(us_county_geo)
+us_county_geo[1,] |> select(state, county, geometry)
+```
+
+### Exercise
+
+Join the location data to the `woncan` statistics.  Plot the
+rates for prostate cancer at the geographic locations where
+they were recorded.
+
+
+# Cancer anatomy 
+
+The Cancer Genome Atlas (TCGA) collects data on a number
+of cancers defined by anatomic site.  The sites are:
+
+```{r lktcga}
+library(TCGAutils)
+data(diseaseCodes)
+datatable(diseaseCodes)
+```
