@@ -14,3 +14,19 @@ MA_cancer_rate_table = function(site="breast", simple=TRUE) {
  if (simple) ans = ans[, -c(1,5)]
  ans
 }
+
+#' generate vector of cancer sites in CDC Wonder table
+#' @export
+woncan_types = function() {
+  data("woncan", package="BiocYES")
+  sort(unique( woncan$`Cancer Sites`))
+}
+
+#' generate site-specific rate table
+#' @param site character(1) name of anatomic site, must reside in value of `woncan_types()`
+#' @export
+filter_woncan = function(site) {
+  stopifnot(site %in% woncan_types())
+  woncan |> filter(`Cancer Sites` == site) |> mutate(aarate=Age.Adjusted.Rate)
+}
+
