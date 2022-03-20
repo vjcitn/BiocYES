@@ -10,6 +10,9 @@
     <loc>http://vjcitn.github.io/BiocYES/articles/index.html</loc>
   </url>
   <url>
+    <loc>http://vjcitn.github.io/BiocYES/articles/intro.html</loc>
+  </url>
+  <url>
     <loc>http://vjcitn.github.io/BiocYES/articles/play4YES.html</loc>
   </url>
   <url>
@@ -25,7 +28,19 @@
     <loc>http://vjcitn.github.io/BiocYES/reference/build_deck.html</loc>
   </url>
   <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/cancer_map_app.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/cancer_map_usa.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/cancer_map_world.html</loc>
+  </url>
+  <url>
     <loc>http://vjcitn.github.io/BiocYES/reference/faces.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/filter_woncan.html</loc>
   </url>
   <url>
     <loc>http://vjcitn.github.io/BiocYES/reference/full_house.html</loc>
@@ -61,9 +76,18 @@
     <loc>http://vjcitn.github.io/BiocYES/reference/us_county_geo.html</loc>
   </url>
   <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/us_map.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/vjc_cancer_net.html</loc>
+  </url>
+  <url>
     <loc>http://vjcitn.github.io/BiocYES/reference/woncan.html</loc>
   </url>
   <url>
     <loc>http://vjcitn.github.io/BiocYES/reference/woncan_meta.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/woncan_types.html</loc>
   </url>
 </urlset>
