@@ -4,12 +4,14 @@
 \alias{cancer_map_usa}
 \title{simple function for site-specific map}
 \usage{
-cancer_map_usa(site = "Stomach", scaling = 1)
+cancer_map_usa(site = "Stomach", scaling = 1, table.only = FALSE)
 }
 \arguments{
 \item{site}{character(1) defaults to "Stomach", must lie in value of woncan_types()}
 
 \item{scaling}{numeric(1) scales the radius of circles, defaults to 1}
+
+\item{table.only}{logical(1) defaults to FALSE; if TRUE just produces CDC WONDER data filtered to selected site}
 }
 \description{
 simple function for site-specific map
