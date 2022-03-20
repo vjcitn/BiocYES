@@ -19,3 +19,8 @@
 #' @docType data
 #' @format character
 "woncan_meta"
+
+#' a table of data of Vince's contacts who developed cancer
+#' @docType data
+#' @format data.frame
+"vjc_cancer_net"

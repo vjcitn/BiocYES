@@ -1,12 +1,13 @@
 # BiocYES
 
-Software and documentation for a [Chan-Zuckerberg Initiative 
+The BiocYES R package defines
+software and documentation for a [Chan-Zuckerberg Initiative 
 project](https://chanzuckerberg.com/eoss/proposals/bioconductor-sustaining-a-worldwide-community-of-genome-data-scientists/)
 on Bioconductor's diversity and inclusiveness with [DFCI YES for CURE](https://www.dfhcc.harvard.edu/research/cancer-disparities/students/yes-for-cure/).  
 
 Our primary concern is to develop open resources for training high school and undergraduate students in cancer data science.
 
-Topics to be addressed
+Topics to be addressed include
 
 - Mapping cancer rates
 - Cancer anatomy

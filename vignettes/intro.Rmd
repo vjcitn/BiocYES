@@ -1,0 +1,53 @@
+---
+title: "Overview of Cancer Data Science concepts for YES for CURE"
+shorttitle: "Intro to cancer data science for YES"
+author: "Vincent Carey"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Overview of Cancer Data Science concepts for YES for CURE}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+```{r setup, results="hide", echo=FALSE}
+suppressPackageStartupMessages({
+library(BiocYES)
+library(sf)
+library(tibble)
+library(DT)
+library(dplyr)
+library(curatedTCGAData)
+library(TCGAutils)
+library(ontoProc)
+})
+```
+
+# Goals of Cancer Data Science modules of YES for CURE
+
+- Explain how data on cancer cases and deaths are collected and summarized in the United States
+    - What are the roles of the Centers for Disease Control, National Cancer Institute, the states, territories and localities in gathering and reporting data?
+    - Where can you go to see information about cancer trends of interest to you?
+- Explain how cancer patients can learn about – and tell about – treatments and clinical trials relevant to their condition
+- Explain how research data on the biology of cancer can be surveyed and explored from a "data science" perspective
+
+"Data" plays a big part in thinking about our future engagement with cancer – as people, scientists, social leaders.  "Data science" is the study of how scientific discipline, including measurement, experimentation, and argument, guides us to use data effectively.  Data science is a young and diverse enterprise!
+
+
+# A personal cancer data project
+
+In 60 years of life I have been cancer free, but many of my relatives and friends have been
+impacted directly:
+
+```{r lkd}
+library(BiocYES)
+library(DT)
+data(vjc_cancer_net)
+datatable(vjc_cancer_net)
+```
+
+How can we interpret this?
