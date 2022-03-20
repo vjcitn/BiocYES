@@ -23,10 +23,11 @@ woncan_types = function() {
 }
 
 #' generate site-specific rate table
+#' @importFrom dplyr filter mutate
 #' @param site character(1) name of anatomic site, must reside in value of `woncan_types()`
 #' @export
 filter_woncan = function(site) {
   stopifnot(site %in% woncan_types())
-  woncan |> filter(`Cancer Sites` == site) |> mutate(aarate=Age.Adjusted.Rate)
+  woncan |> dplyr::filter(`Cancer Sites` == site) |> dplyr::mutate(aarate=Age.Adjusted.Rate)
 }
 
