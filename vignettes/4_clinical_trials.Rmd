@@ -1,0 +1,37 @@
+---
+title: "Session 4: Cancer clinical trials"
+shorttitle: "Cancer clinical trials"
+author: "Vincent Carey"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Session 4: Cancer clinical trials}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+```{r setup, results="hide", echo=FALSE}
+suppressPackageStartupMessages({
+library(BiocYES)
+library(sf)
+library(tibble)
+library(DT)
+library(dplyr)
+library(curatedTCGAData)
+library(TCGAutils)
+library(ontoProc)
+})
+```
+
+# Introduction: Clinical trials for pediatric leukemias in the 1960s
+
+# Equipoise: When medicine is uncertain about what to do
+
+# Randomization: A way to reduce bias when comparing treatment strategies
+
+# Clinicaltrials.gov: Finding and evaluating clinical trials
+

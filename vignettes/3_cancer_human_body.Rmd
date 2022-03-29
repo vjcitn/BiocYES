@@ -1,0 +1,35 @@
+---
+title: "Session 3: Cancer in the human body"
+shorttitle: "Cancer and human anatomy"
+author: "Vincent Carey"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Session 3: Cancer in the human body}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+```{r setup, results="hide", echo=FALSE}
+suppressPackageStartupMessages({
+library(BiocYES)
+library(sf)
+library(tibble)
+library(DT)
+library(dplyr)
+library(curatedTCGAData)
+library(TCGAutils)
+library(ontoProc)
+})
+```
+
+# An atlas of human cancers: TCGA
+
+# Subtypes of breast cancer
+
+# Subtypes of prostate cancer
+

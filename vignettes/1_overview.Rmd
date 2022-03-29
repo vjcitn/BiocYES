@@ -1,0 +1,225 @@
+---
+title: "Session 1: Our approach to Data Science for Cancer Research in YES for CURE"
+shorttitle: "Intro to cancer data science for YES"
+author: "Vincent Carey"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Session 1: Our approach to Data Science for Cancer Research in YES for CURE}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+```{r setup, results="hide", echo=FALSE}
+suppressPackageStartupMessages({
+library(BiocYES)
+library(sf)
+library(tibble)
+library(DT)
+library(dplyr)
+library(curatedTCGAData)
+library(TCGAutils)
+library(ontoProc)
+})
+```
+
+# Session 1: Survey of our approach to **Data Science for Cancer Research**
+
+"Data" plays a big part in thinking about our future engagement with cancer – as people, scientists, social leaders.  "Data science" is the study of how scientific discipline, including measurement, experimentation, and argument, guides us to use data effectively.  Data science is a young and diverse enterprise!
+
+In this vignette, we present a very small-scale dataset to illustrate some of the larger themes of
+cancer data science.  The road map is
+
+- A table enumerating contacts in my life who have dealt with cancer
+- A sketch of principles underlying the assembly of data for scientific purposes
+    - This leads to a critique of my table, and to statements of larger aspirations
+- An overview of topics to be covered in forthcoming sessions
+
+
+# A personal cancer data project
+
+In 60 years of life I have been cancer free, but many of my relatives and friends have been
+impacted directly:
+
+```{r lkd}
+library(BiocYES)
+library(DT)
+data(vjc_cancer_net)
+datatable(vjc_cancer_net)
+```
+
+How can we interpret this?
+
+At best it is difficult.  It is a personalized slice-of-life, it is sad for some of the contacts,
+presents triumphs for others.
+
+When assembling or trying to interpret data, we have to keep in mind
+
+- **The scientific objective of data collection**
+- **The degree of precision needed to achieve our objectives**
+- **The justification of the method by which data are collected and interpreted**
+
+Planning is a fundamental component of data science and cancer research generally.
+
+Here's the plan of our encounters over the next few weeks.
+
+# Topics to illuminate data science in cancer research
+
+## Cancer in the world around us
+
+- What are rates of cancer incidence or mortality in nearby communities?  Around the USA?
+- How do we form maps of cancer incidence or treatment practices?  What
+makes maps interesting and useful?
+- How do we appraise trends in cancer incidence?
+- How do regional trends in cancer incidence help us to reason about preventive solutions?
+
+## Cancer in the human body
+
+- What are the body sites most commonly afflicted by cancer?
+- How do we define risks for cancers at specific body sites?
+- Are cancer preventive strategies and treatments inherently "site-specific"?  Are
+there any approaches that may work for cancer wherever in the body it occurs?
+
+## Finding treatments for cancer
+
+- What are clinical trials?
+- What are the classes of drugs considered useful for treating cancer,
+and how does data science address the tasks of drug discovery and optimization
+of treatment protocols?
+
+## Illuminating cancer biology
+
+- What are somatic mutations?  How do they occur, and how do they drive tumor formation?
+- What is gene expression?  How are patterns of expression identified as playing
+roles in cancer progression and treatment?
+
+
+## When our cancers aren't well-researched
+
+- How is data science mobilized by patient groups who find that there is very
+limited research conducted on their particular conditions?
+
+# A brief introduction to tables and maps for YES
+
+## US Cancer statistics by "metropolitan statistical area"
+
+The BiocYES package for R includes woncan a table derived from the 
+[CDC WONDER data service](https://wonder.cdc.gov/cancer-v2018.HTML). 
+The table provides summaries of cancer incidence over 1999-2018.
+
+```{r lkwonc, echo=FALSE, resultes="hide"}
+ii = rownames(installed.packages())
+needed = c("leaflet", "DT", "dplyr")
+toinst = setdiff(needed, ii)
+if (length(toinst)>0) AnVIL::install(toinst, update=FALSE, ask=FALSE)
+suppressWarnings({suppressMessages({suppressPackageStartupMessages({
+    library(BiocYES)
+    library(DT)
+    library(dplyr)
+    })})
+})
+```
+```{r lkwo1}
+library(BiocYES)
+data(woncan)
+datatable(woncan |> filter(MSA != "Other") |> select(-Population))
+```
+
+### Exercises
+- What is the age adjusted rate of pancreatic cancer per 100000 residents in the Boston metropolitan statistical area (MSA)?
+
+- What MSA has the lowest recorded rate of female breast cancer (1999-2018)? (Search for code 26000-Female.)
+
+
+## Massachusetts data
+
+A function has been provided to produce tables of breast or prostate cancer incidence in Massachusetts counties.
+
+```{r lkma}
+datatable(MA_cancer_rate_table("breast"))
+```
+
+### Exercises
+
+We now have different sets of statistics for a specific form of cancer (breast)
+in different time intervals for Massachusetts.
+
+- Are the reported values for breast cancer incidence 2014-2018 in Massachusetts counties compatible with the WONDER 1999-2018 report for the Boston MSA?
+
+- Compare the county-level rates for prostate cancer in MA with the WONDER rate reported for the Boston MSA.
+
+## Interactive maps
+
+- Twenty years ago the most common Geographic Information System was the paper map or road atlas
+- Now our cell-phones can ask the internet how to get to where we want to go, efficiently
+- Understanding how cancer events unfold in different geographic regions is important for public health
+    - Are there important environmental hazards at specific locations?
+    - Are there clues to genetic origins of particular cancers?
+    - Are culturally shared behaviors leading to increased risk?
+
+- Even though we are comfortable with annotated maps, creating and using "cancer maps" to reason about cancer risk requires some training
+- In this notebook we will work with some interactive maps on the web, and we will produce some maps using R programming
+
+- Exercises
+
+Use the [International Agency for Research on Cancer (IARC) map tool](https://gco.iarc.fr/today/online-analysis-map?v=2020&mode=population&mode_population=continents&population=900&populations=900&key=asr&sex=0&cancer=39&type=0&statistic=5&prevalence=0&population_group=0&ages_group%5B%5D=0&ages_group%5B%5D=17&nb_items=10&group_cancer=1&include_nmsc=0&include_nmsc_other=0&projection=natural-earth&color_palette=default&map_scale=quantile&map_nb_colors=5&continent=0&show_ranking=0&rotate=%255B10%252C0%255D) to survey mortality from cancer in 2020 for individuals aged 10-24. You should see something like the display below.
+
+![IARC map](IARCoverall.jpg)
+
+- True or False: Age standardized mortality from cancer in 2020 for persons aged 10-24 is greater in Vietnam than in neighboring countries.
+
+Use the IARC map tool to produce a worldwide map of breast cancer incidence for women aged 60-79.
+
+- What is the Scandinavian country with largest estimate of age-standardized breast cancer incidence for women aged 60-79?
+
+## Creating a map
+
+We've provided some software that helps you make interactive maps in Jupyter.
+
+```{r domap1}
+mass_map()
+```
+
+The map starts out with a focus on the Boston area. You can point and click to move the focus of the map, or use the +/- control at the top to zoom in or out.
+
+## Adding cancer statistics to the map
+
+We have a table of age-adjusted rates of breast and prostate cancer
+
+```{r lkbrt}
+brtab = MA_cancer_rate_table(site="breast")
+head(brtab, 2)
+```
+
+Here is code that produces a table that combines county latitude and longitude measures with the age-adjusted breast cancer rates.
+
+```{r dodeplyr}
+data(us_county_geo)
+lj = left_join(mutate(brtab, county=County),   # mutate: obtain new variable name
+               filter(us_county_geo, state=="MA"), by="county") # merge rates and geography
+lj$lng = sapply(lj$geometry, "[", 1) # "geometry" is a special structure
+lj$lat = sapply(lj$geometry, "[", 2) # need to peel apart latitude and longitude
+lj$aarat = lj$Age.Adjusted.Rate   # shorter name
+head(lj,2)
+```
+
+Now we use the leaflet function `addAwesomeMarkers` with our latitude and longitude to enhance
+the map.
+
+```{r dointmap}
+mass_map() |>                     # need some HTML to format popup
+    leaflet::addAwesomeMarkers(lat=lj$lat, lng=lj$lng, 
+                               popup=paste(lj$Cancer.Type[1], "<br>", lj$county, "<br>", lj$aarat, sep=""))
+```
+
+### Exercise 
+
+Our presentation of the table `lj` above is not interactive. How can you make it interactive?
+
+How does the map help you to think about patterns of breast cancer incidence in the counties of Massachusetts?
+
+Obtain the table for age-adjusted rates for prostate cancer in MA in 2014-2018, and modify the map to present those statistics. Do you have any comments about patterns of prostate cancer incidence in Massachusetts counties?

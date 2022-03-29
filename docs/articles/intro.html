@@ -5,13 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Session 1: Overview of Cancer Data Science concepts for YES for CURE • BiocYES</title>
+<title>Session 1: Our approach to Data Science for Cancer Research in YES for CURE • BiocYES</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Session 1: Overview of Cancer Data Science concepts for YES for CURE">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Session 1: Our approach to Data Science for Cancer Research in YES for CURE">
 <meta property="og:description" content="BiocYES">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -53,7 +53,19 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/intro.html">Session 1: Overview of Cancer Data Science concepts for YES for CURE</a>
+      <a href="../articles/2_world_around.html">Session 2: Cancer in the world around us</a>
+    </li>
+    <li>
+      <a href="../articles/3_cancer_human_body.html">Session 3: Cancer in the human body</a>
+    </li>
+    <li>
+      <a href="../articles/4_clinical_trials.html">Session 4: Cancer clinical trials</a>
+    </li>
+    <li>
+      <a href="../articles/5_molecular_oncology.html">Session 5: Learning the molecular biology of cancer</a>
+    </li>
+    <li>
+      <a href="../articles/intro.html">Session 1: Our approach to Data Science for Cancer Research in YES for CURE</a>
     </li>
     <li>
       <a href="../articles/play4YES.html">play4YES: probability illustrations with playing cards</a>
@@ -85,10 +97,10 @@
 <script src="intro_files/crosstalk-1.2.0/js/crosstalk.min.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Session 1: Overview of Cancer Data Science concepts for YES for CURE</h1>
+      <h1 data-toc-skip>Session 1: Our approach to Data Science for Cancer Research in YES for CURE</h1>
                         <h4 data-toc-skip class="author">Vincent Carey</h4>
             
-            <h4 data-toc-skip class="date">March 28, 2022</h4>
+            <h4 data-toc-skip class="date">March 29, 2022</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/vjcitn/BiocYES/blob/HEAD/vignettes/intro.Rmd" class="external-link"><code>vignettes/intro.Rmd</code></a></small>
       <div class="hidden name"><code>intro.Rmd</code></div>
@@ -121,8 +133,8 @@
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/DT" class="external-link">DT</a></span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">vjc_cancer_net</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/pkg/DT/man/datatable.html" class="external-link">datatable</a></span><span class="op">(</span><span class="va">vjc_cancer_net</span><span class="op">)</span></code></pre></div>
-<div id="htmlwidget-4ecd45a82a38657e8871" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4ecd45a82a38657e8871">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],["Grandfather","Step-Grand","in-law","in-law","friend","friend","Grt Uncle","Grt Uncle","Colleague","Colleague","Friend","Neighbor","friend","friend","friend"],["Prostate","Lung","Breast","Pancreas","Lymphoma","Breast","Brain","Liver","Prostate","Melanoma","Ovarian","Mesothelioma","Oligodendroglioma","Glioblastoma","Colorectal"],["80s","70s","80s","60s","30s","40s","60s","60s","50s","50s","50s","60s","50s","50s","60s"],["yes","yes","no","no","no","no","yes","yes","no","no","no","yes","no","yes","no"],["yes","yes","yes","yes","yes","yes","yes","yes","no","no","no","yes ","?","?","yes"],["no","?","no","no","no","no","yes","yes","?","no","no","yes","no","no","no"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Connection<\/th>\n      <th>Type<\/th>\n      <th>Age<\/th>\n      <th>Smoker<\/th>\n      <th>Lethal<\/th>\n      <th>Occupational<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><p>How can we interpret this?</p>
+<div id="htmlwidget-c7b623f2e5a5acbf3acc" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c7b623f2e5a5acbf3acc">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],["Grandfather","Step-Grand","in-law","in-law","friend","friend","Grt Uncle","Grt Uncle","Colleague","Colleague","Friend","Neighbor","friend","friend","friend"],["Prostate","Lung","Breast","Pancreas","Lymphoma","Breast","Brain","Liver","Prostate","Melanoma","Ovarian","Mesothelioma","Oligodendroglioma","Glioblastoma","Colorectal"],["80s","70s","80s","60s","30s","40s","60s","60s","50s","50s","50s","60s","50s","50s","60s"],["yes","yes","no","no","no","no","yes","yes","no","no","no","yes","no","yes","no"],["yes","yes","yes","yes","yes","yes","yes","yes","no","no","no","yes ","?","?","yes"],["no","?","no","no","no","no","yes","yes","?","no","no","yes","no","no","no"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Connection<\/th>\n      <th>Type<\/th>\n      <th>Age<\/th>\n      <th>Smoker<\/th>\n      <th>Lethal<\/th>\n      <th>Occupational<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><p>How can we interpret this?</p>
 <p>At best it is difficult. It is a personalized slice-of-life, it is sad for some of the contacts, presents triumphs for others.</p>
 <p>When assembling or trying to interpret data, we have to keep in mind</p>
 <ul>
