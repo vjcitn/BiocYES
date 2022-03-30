@@ -4,11 +4,11 @@
 \alias{us_map}
 \title{simple function to display HTML map of US}
 \usage{
-us_map(provider = "CartoDB.PositronOnlyLabels")
+us_map(provider = "CartoDB.Positron")
 }
 \arguments{
 \item{provider}{character(1) passed to `leaflet::addProviderTiles`, defaults to
-`"CartoDB.PositronOnlyLabels"`}
+`"CartoDB.Positron"`}
 }
 \description{
 simple function to display HTML map of US
