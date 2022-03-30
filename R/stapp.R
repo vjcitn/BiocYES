@@ -5,6 +5,13 @@
 #' @import ggplot2
 #' @export
 variation_app = function() {
+ cwd = getwd()
+ on.exit(setwd(cwd))
+ setwd(system.file("stapp", package="BiocYES"))
+ shiny::runApp()
+}
+
+variation_app_old = function() {
   data("woncan", package="BiocYES")
   sites = unique(woncan$`Cancer Sites`)
   ss = strsplit(woncan$msa, ", ")
