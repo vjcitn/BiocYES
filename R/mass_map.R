@@ -5,10 +5,10 @@
 #' @export
 mass_map = function()  {
   rr <- tags$div(
-   HTML('<p>Made by BiocYES::mass_map()</p>')
+   HTML('<h4>Made by BiocYES::mass_map()</h4>')
   )  
   leaflet() |> addProviderTiles("CartoDB.Positron") |> 
-       setView(-71.78, 42.05, zoom = 8.5) |> addControl(rr, position = "topleft")
+       setView(-71.78, 42.05, zoom = 8.5) |> addControl(rr, position = "topleft", className="map-title")
   }
 
 

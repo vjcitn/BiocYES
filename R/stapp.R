@@ -2,7 +2,7 @@
 #' @import shiny
 #' @importFrom dplyr filter
 #' @import plotly
-#' @import ggplot2
+#' @rawNamespace import(ggplot2, except=last_plot)
 #' @export
 variation_app = function() {
  cwd = getwd()

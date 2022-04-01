@@ -66,6 +66,7 @@ is the rate there?
 
 ```{r lkd3}
 library(sf)
+library(dplyr)
 data(us_county_geo)
 us_county_geo[1,] |> select(state, county, geometry)
 ```

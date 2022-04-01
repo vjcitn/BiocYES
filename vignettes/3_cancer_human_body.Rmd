@@ -27,6 +27,19 @@ library(ontoProc)
 })
 ```
 
+# Cancer in the human body -- data science concepts of anatomy and cancer subtypes
+
+## Preliminary statistical concepts
+
+- "Survival curves": displaying times to event for a cohort of individuals
+    - A time origin is selected, typically time of diagnosis for an individual
+    - An individual is observed to die or relapse, or survives longer than the study followup-time
+    - In the latter case (no event observed) the event is said to be "censored"
+
+- Estimating the five-year survival probability
+- Median survival estimates
+- Confidence intervals
+
 # An atlas of human cancers: TCGA
 
 # Subtypes of breast cancer

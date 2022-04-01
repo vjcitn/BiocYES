@@ -21,7 +21,8 @@ cancer_map_usa = function( site = "Stomach", scaling = 1, table.only=FALSE ) {
     suppressWarnings({
       m = us_map() |> addCircleMarkers(lat=dat$lat, lng=dat$lng, radius=scaling * dat$aarate,
           # popup=htmltools::htmlEscape(paste( site, ": ", dat$aarate, sep="")))
-          popup=(paste( dat$msa, "<br>", site, ": ", dat$aarate, sep="")))
+          popup=(paste( dat$msa, "<br>", site, ": ", dat$aarate, sep=""))) |> 
+          addControl(paste("CDC WONDER age-adjusted rate per 100K,", site, "cancer"), position = "topleft", className="map-title")
       })
     m
     }

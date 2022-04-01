@@ -73,10 +73,16 @@
     <loc>http://vjcitn.github.io/BiocYES/reference/mass_map.html</loc>
   </url>
   <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/metabric.html</loc>
+  </url>
+  <url>
     <loc>http://vjcitn.github.io/BiocYES/reference/one_pair.html</loc>
   </url>
   <url>
     <loc>http://vjcitn.github.io/BiocYES/reference/plotwci.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/prostate_met_adeno.html</loc>
   </url>
   <url>
     <loc>http://vjcitn.github.io/BiocYES/reference/statcrunch_msa.html</loc>
@@ -94,6 +100,9 @@
     <loc>http://vjcitn.github.io/BiocYES/reference/us_map.html</loc>
   </url>
   <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/variation_app.html</loc>
+  </url>
+  <url>
     <loc>http://vjcitn.github.io/BiocYES/reference/vjc_cancer_net.html</loc>
   </url>
   <url>
@@ -104,5 +113,11 @@
   </url>
   <url>
     <loc>http://vjcitn.github.io/BiocYES/reference/woncan_types.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/world_cancer_2020_all.html</loc>
+  </url>
+  <url>
+    <loc>http://vjcitn.github.io/BiocYES/reference/world_geo_sf.html</loc>
   </url>
 </urlset>

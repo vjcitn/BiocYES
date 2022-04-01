@@ -27,6 +27,15 @@ library(ontoProc)
 })
 ```
 
+# Statistical preliminaries
+
+- Geometry of data visualizations
+    - histograms (one dimension)
+    - scatterplots (two dimensions, maybe three)
+    - dynamic scatterplots (rotate)
+    - projections from higher dimensional spaces: principal components
+- Heatmaps with clustered margins
+
 # Introduction: 'One renegade cell'
 
 # Tumor genetics: patterns and exceptions

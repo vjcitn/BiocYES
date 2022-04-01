@@ -29,6 +29,13 @@ library(ontoProc)
 
 # Introduction: Clinical trials for pediatric leukemias in the 1960s
 
+## Preliminary statistical concepts
+
+- Randomization
+- Comparison of survival curves
+- The "null hypothesis" of no treatment effect
+- The "power" of a study to find an effect
+
 # Equipoise: When medicine is uncertain about what to do
 
 # Randomization: A way to reduce bias when comparing treatment strategies

@@ -1,0 +1,12 @@
+```{r setup, results="hide", echo=FALSE}
+suppressPackageStartupMessages({
+library(BiocYES)
+library(sf)
+library(tibble)
+library(DT)
+library(dplyr)
+library(curatedTCGAData)
+library(TCGAutils)
+library(ontoProc)
+})
+```
