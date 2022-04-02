@@ -1,5 +1,7 @@
 # BiocYES
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vjcitn/BiocYES/nodocs)
+
 <font size=3>
 
 The BiocYES R package defines
