@@ -1,6 +1,6 @@
 # BiocYES
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vjcitn/BiocYES/nodocs)
+[Launch Overview notebook in mybinder.org](https://mybinder.org/v2/gh/vjcitn/BiocYES/nodocs?labpath=inst%2Fipynb%2F1_overview.ipynb)
 
 <font size=3>
 
