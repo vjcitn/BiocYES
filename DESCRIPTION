@@ -1,6 +1,6 @@
 Package: BiocYES
 Title: Cancer data science activities for CZI YES for CURE collaboration
-Version: 0.0.19
+Version: 0.0.19001
 Authors@R:
     person(given = "Vince",
            family = "Carey",
@@ -18,3 +18,4 @@ RoxygenNote: 7.1.2
 Encoding: UTF-8
 BugReports: https://github.com/vjcitn/BiocYES/issues
 URL: https://github.com/vjcitn/BiocYES
+SystemRequirements: libgdal-dev, libproj-dev, libudunits2-dev, libjq-dev
