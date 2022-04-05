@@ -183,7 +183,8 @@ We have a table of age-adjusted rates of breast and prostate cancer
 
 ```{r lkbrt}
 brtab = MA_cancer_rate_table(site="breast")
-head(brtab, 2)
+head(
+  brtab, 2)
 ```
 
 Here is code that produces a table that combines county latitude and longitude measures with the age-adjusted breast cancer rates.
