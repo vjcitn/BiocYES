@@ -18,3 +18,4 @@ RoxygenNote: 7.1.2
 Encoding: UTF-8
 BugReports: https://github.com/vjcitn/BiocYES/issues
 URL: https://github.com/vjcitn/BiocYES
+SystemRequirements: libgdal-dev, libproj-dev, libudunits2-dev, libjq-dev
