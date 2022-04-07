@@ -29,6 +29,24 @@ library(ontoProc)
 
 # Cancer in the human body -- data science concepts of anatomy and cancer subtypes
 
+# An atlas of human cancers: TCGA
+
+![NCI GDC body map](./bodymap.jpg)
+
+- This display highlights the general locations in the
+human body that are susceptible to tumor formation
+
+- There are many types of cancers that arise in
+blood or bone marrow -- referred to as liquid tumors
+
+- The display is based on a large project undertaken at the National
+Cancer Institute to collect _genomic data_ on a wide variety of cancers
+
+# Drilling down on breast cancer
+
+Visit [this link](https://portal.gdc.cancer.gov/exploration?facetTab=cases&filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22cases.project.program.name%22%2C%22value%22%3A%5B%22TCGA%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22cases.project.project_id%22%2C%22value%22%3A%5B%22TCGA-BRCA%22%5D%7D%7D%5D%7D&searchTableTab=genes) to see a display of information on
+TCGA participants with breast cancer.
+
 ## Preliminary statistical concepts
 
 - "Survival curves": displaying times to event for a cohort of individuals
@@ -40,7 +58,6 @@ library(ontoProc)
 - Median survival estimates
 - Confidence intervals
 
-# An atlas of human cancers: TCGA
 
 # Subtypes of breast cancer
 

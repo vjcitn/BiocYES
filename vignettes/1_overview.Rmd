@@ -32,12 +32,15 @@ library(ontoProc)
 "Data" plays a big part in thinking about our future engagement with cancer – as people, scientists, social leaders.  "Data science" is the study of how scientific discipline, including measurement, experimentation, and argument, guides us to use data effectively.  Data science is a young and diverse enterprise!
 
 In this vignette, we present a very small-scale dataset to illustrate some of the larger themes of
-cancer data science.  The road map is
+cancer data science.  We then build maps of cancer incidence at the 
+state and national level.  The road map is:
 
 - A table enumerating contacts in my life who have dealt with cancer
 - A sketch of principles underlying the assembly of data for scientific purposes
     - This leads to a critique of my table, and to statements of larger aspirations
-- An overview of topics to be covered in forthcoming sessions
+- We show how to use a searchable table of data collected by CDC on cancers throughout the US
+- We build and use maps of cancer incidence using such tables
+- We interact with some statistical visualizations of variation in cancer incidence
 
 
 # A personal cancer data project
